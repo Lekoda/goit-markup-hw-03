@@ -1,9 +1,11 @@
 /* Common rules  */
+
 :root {
   --primary-bcg-color: #ffffff;
   --secondary-bcg-color: #f5f4fa;
   --accent-bcg-color: #2f303a;
   --accent: #2196f3;
+  --border-element: #ECECEC;
   --text-black-color: #000000;
   --text-grey-color: #212121;
   --text-lightgrey-color: #757575;
@@ -16,10 +18,33 @@ body {
   font-family: "Roboto", sans-serif;
 }
 ul {
+  padding: 0;
+  margin: 0;
+
   list-style-type: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+img {
+  display: block;
+}
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  outline: 2px solid tomato;
 }
 /* LOGO  */
 .logo {
+  margin-right: 93px;
   color: var(--text-black-color);
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -40,6 +65,24 @@ ul {
   line-height: 1.1428;
   letter-spacing: 0.02em;
 }
+.header-container {
+  display: flex;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  align-items: center;
+}
+.nav {
+  display: flex;
+}
+.site-nav {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+.contacts {
+  display: flex;
+  margin-left: auto;
+}
 .site-nav .link {
   color: var(--text-grey-color);
 }
@@ -59,11 +102,23 @@ ul {
 .contacts .link:active {
   color: var(--accent);
 }
+.phone {
+  margin-left: 50px;
+}
 /* HERO SECTION  */
 .hero {
   background: var(--accent-bcg-color);
 }
+.hero-container {
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
 .hero-title {
+  max-width: 696px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+    
   font-weight: 900;
   font-size: 44px;
   line-height: 1.3636;
@@ -73,6 +128,12 @@ ul {
   color: var(--text-white-color);
 }
 .hero-button {
+  display: block;
+  min-width: 216px;
+  height: 50px;
+  margin: 0 auto;
+  /* padding: 10px 32px; */
+
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
@@ -81,9 +142,13 @@ ul {
   color: var(--text-white-color);
   border: none;
   cursor: pointer;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 /* common rule  */
 .title {
+  margin-bottom: 50px;
+
   font-weight: 700;
   font-size: 36px;
   line-height: 1.1666;
@@ -92,6 +157,10 @@ ul {
   color: var(--text-grey-color);
 }
 /* SECTION ADVANTAGES */
+.advantages-container {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 .hide {
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -105,7 +174,13 @@ ul {
   width: 1px;
   word-wrap: normal !important;
 }
+.advantages-list {
+  display: flex;
+  gap: 30px;
+}
 .advantages-subtitle {
+  margin-bottom: 10px;
+
   font-weight: 700;
   font-size: 14px;
   line-height: 1.1428;
@@ -119,11 +194,40 @@ ul {
   letter-spacing: 0.03em;
   color: var(--text-lightgrey-color);
 }
+/* SECTION OUR ACTIVITIES  */
+.activivties-container {
+  padding-bottom: 94px;
+}
+.activities-list {
+  display: flex;
+  gap: 30px;
+}
 /* SECTION TEAM  */
 .team {
   background-color: var(--secondary-bcg-color);
 }
+.team-container {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.team-list {
+  display: flex;
+  gap: 30px;
+}
+.team-item {
+  padding-bottom: 30px;
+  outline: tomato;
+  background-color: var(--primary-bcg-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+.team-img {
+  margin-bottom: 30px;
+}
 .team-name {
+  display: block;
+  margin-bottom: 10px;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 1.1875;
@@ -145,7 +249,13 @@ footer a {
 footer {
   background-color: var(--accent-bcg-color);
 }
+.footer-container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
 footer .logo {
+  margin-bottom: 20px;
+
   color: var(--text-white-color);
 }
 address {

@@ -6,6 +6,7 @@
   --accent-bcg-color: #2f303a;
   --accent: #2196f3;
   --border-element: #ECECEC;
+  --border-second-element: #EEEEEE;
   --text-black-color: #000000;
   --text-grey-color: #212121;
   --text-lightgrey-color: #757575;
@@ -40,7 +41,7 @@ img {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-  outline: 2px solid tomato;
+  /* outline: 2px solid tomato; */
 }
 /* LOGO  */
 .logo {
@@ -64,6 +65,7 @@ img {
   font-size: 14px;
   line-height: 1.1428;
   letter-spacing: 0.02em;
+  border-bottom: 1px solid var(--border-element);
 }
 .header-container {
   display: flex;
@@ -255,7 +257,7 @@ footer {
 }
 footer .logo {
   margin-bottom: 20px;
-
+  margin-right: 0;
   color: var(--text-white-color);
 }
 address {
@@ -279,7 +281,22 @@ address a:active {
 
 /* PORTFOLIO PAGE  */
 /* buttons  */
+.nav-container {
+  padding-top: 94px;
+  padding-bottom: 50px;
+}
+.nav-list {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
 .btn {
+  display:block;
+  padding-top: 6px;
+  padding-right: 22px;
+  padding-bottom: 6px;
+  padding-left: 22px;
+
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
@@ -288,14 +305,41 @@ address a:active {
   letter-spacing: 0.03em;
   background-color: var(--secondary-bcg-color);
   border: none;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
   cursor: pointer;
+}
+.btn .all{
+  padding-top: 6px;
+  padding-right: 25px;
+  padding-bottom: 6px;
+  padding-left: 25px;
 }
 .btn:hover {
   background-color: var(--accent);
   color: var(--text-white-color);
 }
-/* potfolio  */
+/* PORTFOLIO PAGE */
+
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding-bottom: 94px;
+}
+.portfolio-item {
+  max-width: 370px;
+  background-color: var(--primary-bcg-color);
+  border: 1px solid var(--border-second-element);
+}
+.portfolio-img {
+  margin-bottom: 20px;
+}
+.portfolio-info {
+  padding: 20px 24px;
+}
 .portfolio-title {
+  margin-bottom: 4px;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
